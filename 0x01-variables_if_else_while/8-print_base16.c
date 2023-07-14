@@ -9,13 +9,21 @@
 
 int main(void)
 {
-	int digit = 30;
+	int digit = 48;
+	int letter = 'a';
 
-	while (digit <= 39)
+	while (digit <= 57)
 	{
 		putchar(digit);
 		digit++;
 	}
+
+	while (letter <= 'f')
+	{
+		putchar(letter);
+		letter++;
+	}
+
 	putchar('\n');
 
 	return (0);
