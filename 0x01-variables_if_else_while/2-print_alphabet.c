@@ -3,10 +3,10 @@
 /**
  * main - prints the alphabet in lowercase, followed by a new line
  *
- *
- * Return always 0 (Success)
+ * Return: Always 0 (Success)
  */
-int main(void) {
+int main(void) 
+{
 	char letter = 'a';
 
 	while (letter <= 'z')
