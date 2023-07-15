@@ -24,8 +24,8 @@ int main(void)
 			}
 
 			digit_2++;
- 		}
-                
+		}
+
 		digit_1++;
 		digit_2 = digit_1 + 1;
 	}
