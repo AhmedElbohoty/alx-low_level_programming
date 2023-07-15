@@ -16,7 +16,7 @@ int main(void)
 	{
 		while (digit_2 <= 57)
 		{
- 			while (digit_3 <= 57)
+			while (digit_3 <= 57)
 			{
 				putchar(digit_1);
 				putchar(digit_2);
