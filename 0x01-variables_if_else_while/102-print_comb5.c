@@ -2,6 +2,7 @@
 
 /**
  * print - prints all long integer using putchar
+ * @n: The number to be printed
  *
  * Return: Always 0 (Success)
  */
