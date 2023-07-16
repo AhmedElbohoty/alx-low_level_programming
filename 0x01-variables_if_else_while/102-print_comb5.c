@@ -29,7 +29,7 @@ int main(void)
 	{
 		for (digit_2 = digit_1 + 1; digit_2 <= 99; digit_2++)
 		{
-			if (digit_1 < 9)
+			if (digit_1 <= 9)
 			{
 				putchar('0');
 			}
@@ -37,7 +37,7 @@ int main(void)
 
 			putchar(' ');
 
-			if (digit_2 < 9)
+			if (digit_2 <= 9)
 			{
 				putchar('0');
 			}
