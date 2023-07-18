@@ -4,7 +4,7 @@
  * main - prints '_putchar'
  *
  * Description: Write a program that prints _putchar,
- * 		followed by a new line.
+ *		followed by a new line.
  * Return: Always (0)
  */
 int main(void)
