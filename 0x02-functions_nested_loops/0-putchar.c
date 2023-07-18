@@ -3,7 +3,8 @@
 /*
  * main - prints '_putchar'
  *
- * Description: prints '_putchar'
+ * Description: Write a program that prints _putchar,
+ * 		followed by a new line.
  * Return: Always (0)
  */
 int main(void)
@@ -14,7 +15,7 @@ int main(void)
 	while (str[i])
 	{
 		_putchar(str[i]);
-	i++;
+		i++;
 	}
 	_putchar('\n');
 
