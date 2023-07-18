@@ -5,7 +5,7 @@
  *
  * Return: void
  */
-void times_table()
+void times_table(void)
 {
 	int row = 0;
 	int column = 0;
@@ -31,13 +31,14 @@ void times_table()
 
 			_putchar((value % 10) + '0');
 
-			if (column != 9) {
+			if (column != 9)
+			{
 				_putchar(',');
 				_putchar(' ');
 			}
 
 			column++;
-		}	
+		}
 		_putchar('\n');
 		row++;
 	}
