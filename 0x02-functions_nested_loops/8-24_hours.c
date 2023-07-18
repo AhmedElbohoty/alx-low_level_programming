@@ -6,7 +6,7 @@
 *
 * Return: void
 */
-void jack_bauer()
+void jack_bauer(void)
 {
 	int minute;
 	int hour = 0;
@@ -16,13 +16,13 @@ void jack_bauer()
 		minute = 0;
 		while (minute < 60)
 		{
-			_putchar(minute / 10 + '0');
-			_putchar(minute % 10 + '0');
+			_putchar(hour / 10 + '0');
+			_putchar(hour % 10 + '0');
 
 			_putchar(':');
 
-			_putchar(hour / 10 + '0');
-			_putchar(hour % 10 + '0');
+			_putchar(minute / 10 + '0');
+			_putchar(minute % 10 + '0');
 
 			_putchar('\n');
 
