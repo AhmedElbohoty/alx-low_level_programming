@@ -1,12 +1,23 @@
-#include <stdio.h>
+#include "main.h"
 
 /*
- * main - prints '_putchar'
- *
- * Return: Always (0)
- */
+* main - prints '_putchar'
+*
+* Return: Always (0)
+*/
 
 int main(void)
 {
-	printf("_putchar");
+	char *str = "_putchar";
+	int i = 0;
+
+	while (str[i])
+	{
+		_putchar(str[i]);
+	i++;
+	}
+	_putchar('\n');
+
+	return (0);
 }
+
