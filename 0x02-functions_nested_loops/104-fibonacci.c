@@ -17,7 +17,7 @@ int main(void)
 	printf("%lu", numb_1);
 	printf(", %lu", numb_2);
 
-	for (i = 1; i < 91; i++)
+	while (i < 91)
 	{
 		unsigned long sum = numb_1 + numb_2;
 
