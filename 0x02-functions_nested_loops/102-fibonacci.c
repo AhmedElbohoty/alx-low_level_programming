@@ -16,7 +16,7 @@ int main(void)
 	printf("%ld, ", numb_1);
 
 	while (i < count - 1)
-	{			
+	{
 		long tmp = numb_1;
 
 		printf("%ld", numb_2);
