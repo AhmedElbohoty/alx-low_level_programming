@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-	long numb_1 = 1;
-	long numb_2 = 2;
+	long numb_1 = 0;
+	long numb_2 = 1;
 	long res = 0;
 
 	while (res < 4000000)
