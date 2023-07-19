@@ -15,10 +15,12 @@ int main(void)
 	unsigned long numb_1_q, numb_1_r, numb_2_q, numb_2_r;
 
 	printf("%lu", numb_1);
+	printf("%lu", numb_2);
 
 	while (i < 91)
 	{
 		unsigned long sum = numb_1 + numb_2;
+
 		numb_1 = numb_2;
 		numb_2 = sum;
 		printf(", %lu", sum);
