@@ -4,7 +4,7 @@
  * print_times_table - prints the n times table, starting with 0.
  *                     If n is greater than 15 or less than 0 the
  *                     function should not print anything.
- * @n - the integer
+ * @n: the integer
  *
  * Return: void
  */
