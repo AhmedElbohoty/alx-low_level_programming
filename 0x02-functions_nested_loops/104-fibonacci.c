@@ -29,7 +29,7 @@ int main(void)
 	numb_1_r = numb_1 % divisor;
 	numb_2_q = numb_2 / divisor;
 	numb_2_r = numb_2 % divisor;
-	for (i = 92; i < 98; ++i)
+	for (i = 92; i < 97; ++i)
 	{
 		printf(", %lu", numb_2_q + (numb_2_r / divisor));
 		printf("%lu", numb_2_r % divisor);
