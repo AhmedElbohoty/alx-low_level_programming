@@ -15,10 +15,7 @@ void print_times_table(int n)
 	int row = 0;
 
 	if (n > 15 || n < 0)
-	{
 		return;
-	}
-
 
 	while (row <= n)
 	{
@@ -29,27 +26,19 @@ void print_times_table(int n)
 
 			if (column != 0)
 			{
+				if (value <= 99)
+					_putchar(' ');
 				if (value <= 9)
-				{
 					_putchar(' ');
-					_putchar(' ');
-				}
-				else if (value <= 99)
-				{
-					_putchar(' ');
-				}
 			}
 
 			print_long_int(value);
-
-
 
 			if (column != n)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
-
 			column++;
 		}
 	_putchar('\n');
