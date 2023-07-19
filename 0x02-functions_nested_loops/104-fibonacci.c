@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-	int divisor = 100;
+	int divisor = 1000;
 	unsigned long i = 1;
 	unsigned long numb_1 = 1;
 	unsigned long numb_2 = 2;
