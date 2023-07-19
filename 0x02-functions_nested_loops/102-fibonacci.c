@@ -15,12 +15,12 @@ int main(void)
 
 	printf("%ld, ", numb_1);
 
-	while (i < count)
+	while (i < count - 1)
 	{			
 		long tmp = numb_1;
 
 		printf("%ld", numb_2);
-		if (i != 49)
+		if (i != 48)
 			printf(", ");
 
 		numb_1 = numb_2;
