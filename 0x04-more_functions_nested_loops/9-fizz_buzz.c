@@ -8,7 +8,7 @@
 *        for the multiples of 5 print Buzz,
 *        For numbers which are multiples of 3 and 5 print FizzBuzz.
 *
-* Return: Void
+* Return: Always (0) (success)
 */
 int main(void)
 {
@@ -30,5 +30,7 @@ int main(void)
 	}
 
 	printf("\n");
+
+	return (0);
 }
 
