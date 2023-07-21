@@ -4,19 +4,25 @@
  * print_number - prints all long integer using putchar
  * @n: The number to be printed
  *
- * Return: Always 0 (Success)
+ * Return: Void
  */
 void print_number(int n)
 {
-	if (n < 0)
+	unsigned int i;
+
+	if (i < 0)
 	{
 		_putchar('-');
-		n = n * -1;
+		i = n * -1;
+	}
+	else
+	{
+		i = n;
 	}
 
-	if (n / 10)
-		print_number(n / 10);
+	if (i / 10)
+		print_number(i / 10);
 
-	_putchar(n % 10 + '0');
+	_putchar(i % 10 + '0');
 }
 
