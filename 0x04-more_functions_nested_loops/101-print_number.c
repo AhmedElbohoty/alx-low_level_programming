@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * print_number - prints all long integer using putchar
- * @n: The number to be printed
- *
- * Return: Void
- */
+* print_number - prints all long integer using putchar
+* @n: The number to be printed
+*
+* Return: Void
+*/
 void print_number(int n)
 {
 	unsigned int i;
 
-	if (i < 0)
+	if (n < 0)
 	{
 		_putchar('-');
-		i = n * -1;
+		i = -n;
 	}
 	else
 	{
