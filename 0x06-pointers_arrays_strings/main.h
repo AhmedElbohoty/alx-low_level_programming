@@ -11,6 +11,8 @@ char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
 int _strlen(char *s);
+int _islower(int c);
+int isSeparator(char c);
 
 #endif
 
