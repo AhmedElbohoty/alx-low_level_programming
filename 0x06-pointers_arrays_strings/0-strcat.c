@@ -5,8 +5,7 @@
  * @dest: the first pointer to dest
  * @src: the second pointer to src
  *
- * Return: Number if there is number
- *         else 0
+ * Return: the pointer to dest
  */
 
 char *_strcat(char *dest, char *src)
@@ -23,7 +22,7 @@ char *_strcat(char *dest, char *src)
 
 	dest[dest_len + src_len] = '\0';
 
-	return dest;
+	return (dest);
 }
 
 /**
