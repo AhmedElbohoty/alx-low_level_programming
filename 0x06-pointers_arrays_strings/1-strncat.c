@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
-* *_strncat -  concatenates two strings
-* @dest: the first pointer to dest
-* @src: the second pointer to src
-*
-* Return: the point to dest
-*/
+ * *_strncat -  concatenates two strings
+ * @dest: the first pointer to dest
+ * @src: the second pointer to src
+ * @n: the n bytes from src
+ *
+ * Return: the point to dest
+ */
 
 char *_strncat(char *dest, char *src, int n)
 {
