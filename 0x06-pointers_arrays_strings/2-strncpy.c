@@ -13,7 +13,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	char *ptr = dest;
 
-	while (n--)
+	while (*src && n--)
 	{
 		*dest = *src;
 		dest++;
