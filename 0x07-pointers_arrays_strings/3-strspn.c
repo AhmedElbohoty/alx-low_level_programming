@@ -3,17 +3,16 @@
 #include <string.h>
 
 /**
-* _strspn -  gets the length of a prefix substring.
-* @s: the pointer to string
-* @accept: the pointer to substring
-*
-* Return: the number of bytes in the initial segment of
-*         s which consist only of bytes from accept
-*/
-
+ * _strspn -  gets the length of a prefix substring.
+ * @s: the pointer to string
+ * @accept: the pointer to substring
+ *
+ * Return: the number of bytes in the initial segment of
+ *         s which consist only of bytes from accept
+ */
 unsigned int _strspn(char *s, char *accept)
 {
-	int len = 1;
+	int len = 0;
 	char *base_accept = accept;
 
 	while (*s != '\0')
@@ -44,12 +43,12 @@ char is_char_str(char *s, char c)
 
 	while (*s >= '\0')
 	{
-		s++;
 		if (*s == c)
 		{
 			b = 1;
 			break;
 		}
+		s++;
 	}
 
 	return (b);
