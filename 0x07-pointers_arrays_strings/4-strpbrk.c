@@ -11,6 +11,7 @@
 char *_strpbrk(char *s, char *accept)
 {
 	char *base_acc = accept;
+	char *null_pt = 0;
 
 	while (*s != '\0')
 	{
@@ -27,7 +28,7 @@ char *_strpbrk(char *s, char *accept)
 	}
 
 	if (*s == '\0')
-		return ("(null)");
+		return (null_pt);
 
 	return (s);
 }
