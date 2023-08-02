@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts_recursion - locates a character in a string.
+ * _puts_recursion - print string recursively
  * @s: the string to print
  *
  * Return: Nothing
