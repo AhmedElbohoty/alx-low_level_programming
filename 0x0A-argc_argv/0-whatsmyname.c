@@ -16,5 +16,7 @@ int main(__attribute__((unused))int argc, char *argv[])
 		argv[0]++;
 	}
 
+	_putchar('\n');
+
 	return (0);
 }
