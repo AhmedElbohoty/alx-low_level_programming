@@ -10,7 +10,7 @@
 
 int main(int argc, __attribute__((unused)) char *argv[])
 {
-	print_number(argc);
+	print_number(argc - 1);
 	_putchar('\n');
 
 	return (0);
