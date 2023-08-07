@@ -10,8 +10,9 @@
 
 int main(int argc, __attribute__((unused)) char *argv[])
 {
-	_putchar(argc);
+	_putchar(argc + 48);
 	_putchar('\n');
 
 	return (0);
 }
+
