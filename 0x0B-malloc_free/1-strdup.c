@@ -42,7 +42,7 @@ char *_strdup(char *str)
 
 	p = (char *)malloc(sizeof(char) * len);
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len + 1; i++)
 	{
 		p[i] = str[i];
 	}
