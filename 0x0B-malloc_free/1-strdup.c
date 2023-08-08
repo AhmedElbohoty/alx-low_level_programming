@@ -43,7 +43,7 @@ char *_strdup(char *str)
 
 	p = (char *)malloc(sizeof(char) * len);
 
-	if(p == NULL)
+	if (p == NULL)
 		return (p);
 
 	for (i = 0; i < len; i++)
