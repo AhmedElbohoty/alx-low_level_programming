@@ -38,11 +38,15 @@ char *_strdup(char *str)
 	}
 
 	/* Get the length of string */
-	len = _strlen(str);
+	/* Add one for end of string */
+	len = _strlen(str) + 1;
 
 	p = (char *)malloc(sizeof(char) * len);
 
-	for (i = 0; i < len + 1; i++)
+	if(p == NULL)
+		return (p);
+
+	for (i = 0; i < len; i++)
 	{
 		p[i] = str[i];
 	}
