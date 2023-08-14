@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "dog.h"
 
 /**
@@ -11,7 +10,7 @@
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
-		exit(EXIT_FAILURE);
+		return;
 
 	if (d->name == NULL)
 		printf("Name: (nil)\n");
