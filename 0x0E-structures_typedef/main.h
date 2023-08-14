@@ -1,0 +1,8 @@
+#ifndef HEADER_MAIN
+#define HEADER_MAIN
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+
+#endif
+
