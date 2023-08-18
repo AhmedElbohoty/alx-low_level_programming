@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "variadic_functions.h"
 
 /**
  * print_strings - prints strings
@@ -10,17 +11,17 @@
  * Return: Nothing
  */
 void print_strings(const char *separator, const unsigned int n, ...)
-	{
+{
 	unsigned int i;
 	char *str;
 
-	va_list list;
+	va_list args_ptr;
 
-	va_start(list, n);
+	va_start(args_ptr, n);
 
 	for (i = 0; i < n; i++)
 	{
-		str = va_arg(list, char *);
+		str = va_arg(args_ptr, char *);
 		if (str == NULL)
 			str = "(nil)";
 
@@ -28,11 +29,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		if (separator != NULL && i != n - 1)
 			printf("%s", separator);
-		else
-			printf(" ");
 	}
 
-	va_end(list);
+	va_end(args_ptr);
 
 	printf("\n");
 }
