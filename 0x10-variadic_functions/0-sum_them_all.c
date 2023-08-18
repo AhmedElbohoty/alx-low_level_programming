@@ -4,13 +4,13 @@
  * sum_them_all - the sum of all its parameters
  * @n: count of args
  *
- * Retrun: (0) if n eqauls 0
+ * Return: (0) if n eqauls 0
  *         ELSE returns the sum of all args
  */
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list args_ptr;
-	unsigned i;
+	unsigned int i;
 	int sum = 0;
 
 	if (n == 0)
