@@ -40,6 +40,8 @@ int main(int argc, char *argv[])
 
 	/* Description 04 */
 	r = read(cp_from, buff, 1024);
+	if (r == -1)
+		read_error(buff, argv[1]);
 	while (r > 0)
 	{
 		if (cp_from == -1 || r == -1)
