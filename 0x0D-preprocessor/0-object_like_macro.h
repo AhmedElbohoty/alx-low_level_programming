@@ -1,7 +1,0 @@
-#ifndef OBJECT_LIKE_MACRO_HEADER
-#define OBJECT_LIKE_MACRO_HEADER
-
-#define SIZE 1024
-
-#endif
-
