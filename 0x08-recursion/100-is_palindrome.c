@@ -16,7 +16,7 @@ int is_palindrome(char *s)
 }
 
 /**
- * is_palindrome_helper - compare the two characters
+ * compare_chars - compare the two characters
  * @s: the number
  * @i: start index
  * @j: end index
