@@ -2,7 +2,7 @@
 
 /**
  * is_palindrome - check if a string is a palindrom
- * @s: the number
+ * @s: the string
  *
  * Return: - If the string is palindrome, return (1);
  *         0 if a string is not a palindrome
@@ -17,7 +17,7 @@ int is_palindrome(char *s)
 
 /**
  * compare_chars - compare the two characters
- * @s: the number
+ * @s: the string
  * @i: start index
  * @j: end index
  *

@@ -14,5 +14,8 @@ int is_prime_recur(int n, int i);
 int is_palindrome(char *s);
 int _strlen(char *s);
 int compare_chars(char *s, int i, int j);
+int wildcmp(char *s1, char *s2);
+int wildcmp_recur(char *s1, char *s2, int m, int n);
+int is_str_asterisk(char *s, int i);
 
 #endif /* ifndef MAIN_HEADER  */
