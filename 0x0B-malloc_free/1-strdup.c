@@ -19,11 +19,12 @@ char *_strdup(char *str)
 
 	/* Add one for the end of string char*/
 	size = _strlen(str) + 1;
-	if (size == NULL)
+	arr = malloc(size * sizeof(char));
+	if (arr == NULL)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
-		arr[i] == str[i];
+		arr[i] = str[i];
 
 	return (arr);
 }
@@ -41,8 +42,7 @@ int _strlen(char *s)
 	if (*s == '\0')
 		return (len);
 
-	len =  1 + _strlen(s + 1);
+	len = 1 + _strlen(s + 1);
 
 	return (len);
 }
-
