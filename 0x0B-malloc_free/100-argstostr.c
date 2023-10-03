@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * argstostr - concatenates all the arguments of your program
@@ -12,7 +13,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i;
+	int i, j, c = 0, len = 0;
 	char *str = NULL;
 
 	if (ac == 0 || av == NULL)
@@ -20,55 +21,24 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		str = str_concat(str, av[i]);
-		if (str == NULL)
-			return (NULL);
+		/* Add extra byte for '/n' */
+		len += _strlen(av[i]) + 1;
 	}
 
-	return (str);
-}
-
-/**
- * str_concat - concatenates two strings
- * @s1: The first string
- * @s2: The second string
- *
- * Return: Null (Failure)
- *         pointer (Success)
- */
-char *str_concat(char *s1, char *s2)
-{
-	int i, j, s1_len, s2_len;
-	char *p;
-
-	if (s1 == NULL)
-		s1 = "";
-
-	if (s2 == NULL)
-		s2 = "";
-
-	s1_len = _strlen(s1);
-	s2_len = _strlen(s2);
-
-	/* Add one byte for null terminated */
-	p = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
-
-	if (p == NULL)
+	str = malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
 		return (NULL);
 
-
-	for (i = 0; i < s1_len; i++)
-		p[i] = s1[i];
-
-	for (j = 0; j < s2_len; j++)
+	for (i = 0; i < ac; i++)
 	{
-		p[i] = s2[j];
-		i++;
+		for (j = 0; av[i][j] != '\0'; j++)
+			str[c++] = av[i][j];
+		str[c++] = '\n';
 	}
-	p[i] = '\n';
 
-	return (p);
+	str[c + 1] = '\0';
 
+	return (str);
 }
 
 /**
@@ -88,4 +58,3 @@ int _strlen(char *s)
 
 	return (len);
 }
-
