@@ -10,14 +10,14 @@
  */
 char **strtow(char *str)
 {
-	char **argv = NULL;
-	int str_size = _strlen(str);
-	int arr_size = words_count(str);
-	char prev_char = '\0';
-	int i = 0, j = 0, m = 0;
-	int start;
+	char **argv = NULL, prev_char = '\0';
+	int str_size = _strlen(str), arr_size = words_count(str);
+	int i = 0, j = 0, m = 0, start;
 
-	if (str_size == 0 || str == NULL || str[0] == ' ')
+	if (!str_size || str == NULL)
+		return (NULL);
+
+	if (str_size == 1 && str[0] == ' ')
 		return (NULL);
 
 	argv = malloc(sizeof(char *) * (arr_size + 1));
