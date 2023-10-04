@@ -37,7 +37,6 @@ char **strtow(char *str)
 				while (start <= i)
 					argv[j][m++] = str[start++];
 
-				/* argv[j][m] = '\n'; */
 				j++;
 			}
 		}
