@@ -30,7 +30,7 @@ char **strtow(char *str)
 		{
 			if (str[i + 1] == ' ' || str[i + 1] == '\0')
 			{
-				argv[j] = malloc(sizeof(char) * (i + start));
+				argv[j] = malloc(sizeof(char) * (i - start + 2));
 				if (argv[j] == NULL)
 					return (NULL);
 				/* Check for error and free */
