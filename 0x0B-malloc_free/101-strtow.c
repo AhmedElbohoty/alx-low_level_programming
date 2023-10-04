@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -33,12 +32,12 @@ char **strtow(char *str)
 				argv[j] = malloc(sizeof(char) * (i - start + 2));
 				if (argv[j] == NULL)
 					return (NULL);
-				/* Check for error and free */
 				m = 0;
+
 				while (start <= i)
 					argv[j][m++] = str[start++];
 
-				argv[j][start] = '\n';
+				/* argv[j][m] = '\n'; */
 				j++;
 			}
 		}
