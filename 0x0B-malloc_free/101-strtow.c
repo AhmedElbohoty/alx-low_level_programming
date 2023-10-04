@@ -10,7 +10,7 @@
  */
 char **strtow(char *str)
 {
-	char **argv = NULL, prev_char = '\0';
+	char **argv = NULL, prev_char = ' ';
 	int str_size = _strlen(str), arr_size = words_count(str);
 	int i = 0, j = 0, m = 0, start;
 
@@ -42,7 +42,7 @@ char **strtow(char *str)
 			}
 		}
 
-		if (prev_char == ' ' || i == 0)
+		if (prev_char == ' ')
 			start = i;
 		prev_char = str[i];
 	}
