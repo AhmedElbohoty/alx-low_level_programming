@@ -17,6 +17,9 @@ char **strtow(char *str)
 	int i = 0, j = 0, m = 0;
 	int start;
 
+	if (str == NULL || !str)
+		return (NULL);
+
 	argv = malloc(sizeof(char *) * (arr_size + 1));
 
 	for (i = 0; i < str_size; i++)
@@ -30,9 +33,7 @@ char **strtow(char *str)
 				m = 0;
 				while (start <= i)
 				{
-					argv[j][m] = str[start];
-					m++;
-					start++;
+					argv[j][m++] = str[start++];
 				}
 
 				argv[j][start] = '\n';
