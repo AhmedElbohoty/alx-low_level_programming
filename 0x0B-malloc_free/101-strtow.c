@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -13,7 +14,7 @@ char **strtow(char *str)
 	int str_size = _strlen(str), arr_size = words_count(str);
 	int i = 0, j = 0, m = 0, start;
 
-	if (!str_size || str == NULL)
+	if (!arr_size || str == NULL)
 		return (NULL);
 
 	if (str_size == 1 && str[0] == ' ')
