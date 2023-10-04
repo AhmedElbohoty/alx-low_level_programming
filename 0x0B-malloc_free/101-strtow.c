@@ -17,33 +17,32 @@ char **strtow(char *str)
 	int i = 0, j = 0, m = 0;
 	int start;
 
-	if (str == NULL || !str)
+	if (!str || str == NULL)
 		return (NULL);
 
 	argv = malloc(sizeof(char *) * (arr_size + 1));
+	if (argv == NULL)
+		return (NULL);
 
 	for (i = 0; i < str_size; i++)
 	{
 		if (str[i] != ' ')
 		{
-			if (str[i + 1] == ' ')
+			if (str[i + 1] == ' ' || str[i + 1] == '\0')
 			{
-				argv[j] = malloc(sizeof(char) * (i + 1 - start + 1));
+				argv[j] = malloc(sizeof(char) * (i + start));
+				if (argv[j] == NULL)
+					return (NULL);
 				/* Check for error and free */
 				m = 0;
 				while (start <= i)
-				{
 					argv[j][m++] = str[start++];
-				}
 
 				argv[j][start] = '\n';
 				j++;
 			}
-			else
-			{
-				if (prev_char == ' ')
+			else if (prev_char == ' ')
 				start = i;
-			}
 		}
 		prev_char = str[i];
 	}
@@ -61,7 +60,7 @@ char **strtow(char *str)
 int words_count(char *str)
 {
 	int count = 0, i;
-	char prev_char = '\0';
+	char prev_char = ' ';
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -91,4 +90,3 @@ int _strlen(char *s)
 
 	return (len);
 }
-
