@@ -41,9 +41,10 @@ char **strtow(char *str)
 				argv[j][start] = '\n';
 				j++;
 			}
-			else if (prev_char == ' ')
-				start = i;
 		}
+
+		if (prev_char == ' ' || i == 0)
+			start = i;
 		prev_char = str[i];
 	}
 	argv[j] = NULL;
