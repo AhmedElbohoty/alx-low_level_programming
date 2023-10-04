@@ -17,7 +17,7 @@ char **strtow(char *str)
 	int i = 0, j = 0, m = 0;
 	int start;
 
-	if (!str || str == NULL)
+	if (str_size == 0 || str == NULL || str[0] == ' ')
 		return (NULL);
 
 	argv = malloc(sizeof(char *) * (arr_size + 1));
