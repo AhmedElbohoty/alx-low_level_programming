@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -12,7 +11,7 @@ char **strtow(char *str)
 {
 	char **argv = NULL, prev_char = ' ';
 	int str_size = _strlen(str), arr_size = words_count(str);
-	int i = 0, j = 0, m = 0, start;
+	int i = 0, j = 0, m = 0, start = 0;
 
 	if (!arr_size || str == NULL)
 		return (NULL);
@@ -31,6 +30,7 @@ char **strtow(char *str)
 			if (str[i + 1] == ' ' || str[i + 1] == '\0')
 			{
 				argv[j] = malloc(sizeof(char) * (i - start + 2));
+
 				if (argv[j] == NULL)
 					return (NULL);
 				m = 0;
