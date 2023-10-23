@@ -2,10 +2,10 @@
 #include "lists.h"
 
 /**
- * free_listint2 - frees a listint_t list and sets the head to NULL
- * @head:  to singly linked list
+ * free_listint2 - frees a listint_t list and sets the head to NULL.
+ * @head:  to singly linked list.
  *
- * Return: Nothing
+ * Return: Nothing.
  */
 void free_listint2(listint_t **head)
 {
@@ -24,4 +24,3 @@ void free_listint2(listint_t **head)
 
 	*head = NULL;
 }
-
