@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 #include "lists.h"
 
@@ -14,21 +13,25 @@
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *node;
-	dlistint_t *temp = *head;
 
+	/* Create the new node */
 	node = malloc(sizeof(dlistint_t));
 	if (node == NULL)
 		return (NULL);
 
-	node->n = n;
-	node->next = temp;
 	node->prev = NULL;
+	node->n = n;
+	node->next = NULL;
 
-	if (temp != NULL)
-		temp->prev = node;
+	if (*head == NULL)
+	{
+		*head = node;
+		return (*head);
+	}
 
+	node->next = *head;
+	(*head)->prev = node;
 	*head = node;
 
 	return (*head);
 }
-
