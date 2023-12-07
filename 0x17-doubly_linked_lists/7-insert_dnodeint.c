@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - Returns the sum of all the n of a linked list.
+ * insert_dnodeint_at_index - Inserts a new node at a given position.
  * @h: The pointer to the list.
  * @idx: the index of the list where the new node should be added.
  * @n: the data of new node
