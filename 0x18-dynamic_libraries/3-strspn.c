@@ -19,7 +19,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		accept = base_accept;
 
-		if (!_strpbrk(*s, accept))
+		if (!_strpbrk(s, accept))
 			break;
 
 		s++;
