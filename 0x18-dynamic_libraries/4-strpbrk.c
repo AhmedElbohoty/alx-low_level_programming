@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * *strpbrk - locates a character in a string.
+ * *_strpbrk - locates a character in a string.
  * @s: the pointer to string
- * @c: the character
+ * @accept: the character
  *
  * Return: a pointer to the first occurrence of the character c in the
  *         string s, or NULL if the character is not found
