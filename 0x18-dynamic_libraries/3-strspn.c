@@ -14,12 +14,23 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int len = 0;
 	char *base_accept = accept;
+	char b = 0;
 
 	while (*s != '\0')
 	{
 		accept = base_accept;
 
-		if (!is_char_str(accept, *s))
+		while (*s >= '\0')
+		{
+			if (*s == *accept)
+			{
+				b = 1;
+				break;
+			}
+			s++;
+		}
+
+		if (!b)
 			break;
 
 		s++;
@@ -28,29 +39,3 @@ unsigned int _strspn(char *s, char *accept)
 
 	return (len);
 }
-
-/**
- * is_char_str - check if character is in string.
- * @s: the pointer to string
- * @c: the character
- *
- * Return: 1 if string contains the character
- *         ELSE 0
- */
-char is_char_str(char *s, char c)
-{
-	char b = 0;
-
-	while (*s >= '\0')
-	{
-		if (*s == c)
-		{
-			b = 1;
-			break;
-		}
-		s++;
-	}
-
-	return (b);
-}
-
