@@ -10,7 +10,7 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int i = 0;
+	unsigned long int i = 0, delim = 0;
 
 	if (!ht || ht->size == 0)
 		return;
@@ -18,7 +18,13 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	while (i < ht->size)
 	{
-		print_list(ht->array[i]);
+		if (ht->array[i])
+		{
+			if (delim == 1)
+				printf(", ");
+			delim = 1;
+			print_list(ht->array[i]);
+		}
 		i++;
 	}
 	printf("}\n");
@@ -33,6 +39,9 @@ void hash_table_print(const hash_table_t *ht)
 void print_list(const hash_node_t *ls)
 {
 	const hash_node_t *temp = NULL;
+
+	if (ls == NULL)
+		return;
 
 	temp = ls;
 	while (temp != NULL)
