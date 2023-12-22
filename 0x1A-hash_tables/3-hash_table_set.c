@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "hash_tables.h"
-#include <stdio.h>
 
 /**
  * hash_table_set - Find the index of a key.
