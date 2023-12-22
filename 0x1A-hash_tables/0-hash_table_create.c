@@ -7,7 +7,7 @@
  * @size: Size of the table.
  *
  * Return: - If size equals 0 or malloc failed, return NULL.
- *         - Else, retunr the hash table.
+ *         - Else, return the hash table.
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
