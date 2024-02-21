@@ -4,7 +4,7 @@ SRC = main.c school.c	# the .c files.
 
 OBJ = $(SRC:.c=.o)	# the .o files.
 
-NAME = school	# the name of the executable.
+NAME = school
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
