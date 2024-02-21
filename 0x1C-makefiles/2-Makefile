@@ -2,9 +2,9 @@ CC = gcc    # the compiler to be used
 
 SRC = main.c school.c   # the .c files
 
-OBJ = $(SRC:.c.o)	# the .o files
+OBJ = ${SRC:.c.o}	# the .o files
 
 NAME = school	# the name of the executable
 
-all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+all: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
