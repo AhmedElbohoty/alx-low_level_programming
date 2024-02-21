@@ -1,6 +1,9 @@
 # Usage:
 # make	# compile all files
 # make clean	# deletes all Emacs and Vim temporary files along with the executable
+# make oclean	# deletes the object files
+# make fclean	# deletes all Emacs and Vim temporary files, the executable, and the object files
+# make re	# forces recompilation of all source files
 
 CC = gcc	# the compiler to be used.
 
