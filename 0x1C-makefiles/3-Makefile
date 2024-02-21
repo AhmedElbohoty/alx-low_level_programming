@@ -1,8 +1,8 @@
-CC = gcc
+CC = gcc	# the compiler to be used.
 
-SRC = main.c school.c
+SRC = main.c school.c	# the .c files.
 
-OBJ = ${SRC:.c=.o}
+OBJ = ${SRC:.c=.o}	# the .o files.
 
 NAME = school
 
