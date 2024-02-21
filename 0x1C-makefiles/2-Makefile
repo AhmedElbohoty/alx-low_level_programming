@@ -1,10 +1,10 @@
-CC = gcc    # the compiler to be used
+CC = gcc
 
-SRC = main.c school.c   # the .c files
+SRC = main.c school.c
 
-OBJ = ${SRC:.c=.o}	# the .o files
+OBJ = $(SRC:.c=.o)
 
-NAME = school	# the name of the executable
+NAME = school
 
-all: ${OBJ}
-	${CC} ${OBJ} -c -o ${NAME}
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
