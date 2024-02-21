@@ -1,3 +1,7 @@
+# Usage:
+# make	# compile all files
+# make clean	# deletes all Emacs and Vim temporary files along with the executable
+
 CC = gcc	# the compiler to be used.
 
 SRC = main.c school.c	# the .c files.
