@@ -1,0 +1,33 @@
+# Usage:
+# make	# compile all files
+# make clean	# deletes all Emacs and Vim temporary files along with the executable
+# make oclean	# deletes the object files
+# make fclean	# deletes all Emacs and Vim temporary files, the executable, and the object files
+# make re	# forces recompilation of all source files
+
+CC = gcc	# the compiler to be used.
+
+SRC = main.c school.c	# the .c files.
+
+OBJ = ${SRC:.c=.o}	# the .o files.
+
+NAME = school
+
+RM = rm -f
+
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+.PHONY: all clean oclean fclean re
+
+all: ${OBJ}
+	${CC} ${CFLAGS} ${OBJ} -o ${NAME}
+
+clean:
+	${RM} *~ ${NAME}
+
+oclean:
+	${RM} ${OBJ}
+
+fclean: clean oclean
+
+re: oclean all
