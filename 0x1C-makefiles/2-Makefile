@@ -6,5 +6,5 @@ OBJ = ${SRC:.c=.o}	# the .o files
 
 NAME = school	# the name of the executable
 
-all: ${OBJ}
-	${CC} ${OBJ} -o ${NAME}
+all: ${SRC}
+	${CC} ${SRC} -o ${NAME}
