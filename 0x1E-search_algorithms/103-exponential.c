@@ -37,7 +37,7 @@ int exponential_search(int *array, size_t size, int value)
 }
 
 /**
- * binary_search - Searches for a value in an array of integers using the
+ * binary_expo_search - Searches for a value in an array of integers using the
  *                 Binary search algorithm.
  * @array: Pointer to the first element of array.
  * @left:  Left index.
