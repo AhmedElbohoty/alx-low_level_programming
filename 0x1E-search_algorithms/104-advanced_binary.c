@@ -13,10 +13,10 @@
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-    if (array == NULL || size == 0)
-        return (-1);
+	if (array == NULL || size == 0)
+		return (-1);
 
-    return (advanced_binary_recur(array, 0, size - 1, value));
+	return (advanced_binary_recur(array, 0, size - 1, value));
 }
 
 /**
@@ -32,23 +32,23 @@ int advanced_binary(int *array, size_t size, int value)
  */
 int advanced_binary_recur(int *array, size_t left, size_t right, int value)
 {
-    size_t mid;
+	size_t mid;
 
-    if (right < left)
-        return (-1);
+	if (right < left)
+		return (-1);
 
-    print_array(array, left, right);
+	print_array(array, left, right);
 
-    mid = left + (right - left) / 2;
-    if (array[mid] == value && (mid == left || array[mid - 1] != value))
-        return (mid);
+	mid = left + (right - left) / 2;
+	if (array[mid] == value && (mid == left || array[mid - 1] != value))
+		return (mid);
 
-    if (array[mid] >= value)
-        right = mid;
-    else
-        left = mid + 1;
+	if (array[mid] >= value)
+		right = mid;
+	else
+		left = mid + 1;
 
-    return (advanced_binary_recur(array, left, right, value));
+	return (advanced_binary_recur(array, left, right, value));
 }
 
 /**
@@ -61,10 +61,10 @@ int advanced_binary_recur(int *array, size_t left, size_t right, int value)
  */
 void print_array(int *array, size_t start, size_t end)
 {
-    size_t i;
+	size_t i;
 
-    printf("Searching in array: ");
-    for (i = start; i < end; i++)
-        printf("%d, ", array[i]);
-    printf("%d\n", array[i]);
+	printf("Searching in array: ");
+	for (i = start; i < end; i++)
+		printf("%d, ", array[i]);
+	printf("%d\n", array[i]);
 }
